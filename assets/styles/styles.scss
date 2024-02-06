@@ -130,6 +130,14 @@ body {
         display: block;
     }
 
+    &-close {
+        padding: 10px;
+        font-size: 2rem;
+        color: #5d5d7f;
+        border: none;
+        background: none;
+    }
+
     &-name {
         text-align: center;
         font-size: 2rem;

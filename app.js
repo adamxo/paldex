@@ -16,7 +16,7 @@ function openModal(name, number, image, descr, type) {
   modalDescr.innerHTML = descr
 
   modalImage.src = image
-  modalImage.classList.add(type)
+  modalImage.classList.add(type + "-type")
 
   modal.classList.toggle('active')
 }

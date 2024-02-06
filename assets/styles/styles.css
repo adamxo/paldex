@@ -118,6 +118,13 @@ body {
 .app__modal.active {
   display: block;
 }
+.app__modal-close {
+  padding: 10px;
+  font-size: 2rem;
+  color: #5d5d7f;
+  border: none;
+  background: none;
+}
 .app__modal-name {
   text-align: center;
   font-size: 2rem;
