@@ -1,88 +1,178 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-html, body {
-    overflow-x: hidden;
+.roboto-light {
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.roboto-regular {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.roboto-medium {
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.roboto-bold {
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+html,
+body {
+  overflow-x: hidden;
+  background: #f5fbfb;
+  color: #2e3058;
 }
 
 body {
-    position: relative;
+  position: relative;
 }
 
 .app {
-    width: 100vw;
+  padding: 50px 30px;
+  &__header {
+    &-title {
+      font-size: 2.5rem;
+      padding-bottom: 15px;
+      color: #2e3058;
+    }
+
+    &-intro {
+      color: #5d5d7f;
+    }
+
+    &-inputs {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      margin-top: 20px;
+
+      &-search {
+        width: 80%;
+        padding: 15px;
+        border: none;
+        background: #ecf3f5;
+        border-radius: 15px;
+        font-size: 1.05rem;
+      }
+
+      &-filters {
+        width: 15%;
+        border-radius: 15px;
+        border: none;
+        background: #5d5d7e;
+        color: #fefefe;
+        font-size: 2rem;
+      }
+    }
+  }
+
+  &__cards {
+    width: 100%;
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
     flex-wrap: wrap;
-    background: #000;
     font-family: sans-serif;
     font-weight: 100;
-    color: #fefefe;
+    gap: 5%;
+    margin-top: 25px;
+
+    .card {
+        width: 47.5%;
+        border-radius: 15px;
+        padding: 25px;
+        text-align: center;
+        margin-top: 15px;
+        cursor: pointer;
+    
+        &__image {
+          width: 100%;
+          margin-right: auto;
+          border-bottom-right-radius: 50%;
+        }
+    
+        &__title {
+          width: 100%;
+          text-align: center;
+          font-weight: 700;
+          font-size: 1.25rem;
+          margin-top: 25px;
+        }
+    
+        &__number {
+            margin-top: 10px;
+        }
+      }
+  }
+
+  &__modal {
+    width: 100vw;
+    height: 100vh;
+    background: #f5fbfb;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: none;
+    padding: 50px 30px;
+
+    &.active {
+        display: block;
+    }
+
+    &-name {
+        text-align: center;
+        font-size: 2rem;
+    }
+
+    &-number {
+        text-align: center;
+    }
+
+    &-image {
+        width: 100%;
+        margin: 30px 0;
+        border-radius: 30px;
+    }
+
+    &-descr {
+        color: #5d5d7f;
+        line-height: 24px;
+    }
+  }
 }
 
-.card { 
-    width: 100%;
-    height: 100vh;
-    border-radius: 8px;
-
-    &__image {
-        width: 100%;
-        margin-right: auto;
-        border-bottom-right-radius: 50%;
-        border-bottom-left-radius: 50%;
-
-        &.neutral {
-            background: linear-gradient(#fff 0%, #000 90%);
-        }
-
-        &.fire {
-            background: radial-gradient(#8A3716, #000);
-        }
-    }
-
-    &__title {
-        font-size: 3rem;
-        letter-spacing: 3px;
-        width: 100%;
-        text-align: center;
-        margin-top: 60px;
-        
-        &:after {
-            content: attr(data-value);;
-            display: block;
-            width: 100%;
-            font-size: 7rem;
-            margin-top: -80px;
-            opacity: 20%;
-        }
-    }
-
-    &__type {
-        width: 100%;
-        text-align: center;
-        border-radius: 50px;
-        display: flex;
-        justify-content: center;
-
-        &-text {
-            border: 3px solid;
-            padding: 5px;
-            border-radius: 50px;
-            
-            &.neutral {
-                border-color: green;
-            }
-            &.fire {
-                border-color: orange;
-            }
-        }
-    }
-
-    &__descr {
-        text-align: center;
-        padding: 25px;
-    }
+.grass-type {
+    background: #C5E2D4;
+}
+.neutral-type {
+    background: #e7e8e8;
+}
+.fire-type {
+    background: #ffddbd;
+}
+.water-type {
+    background: #bce0fd;
+}
+.electric-type {
+    background: #fdf2ba;
+}
+.ground-type {
+    background: #e7d0c4;
+}
+.dark-type {
+    background: #dfc9f7;
+}
+.ice-type {
+    background: #d3fcff;
 }

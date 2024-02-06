@@ -5,11 +5,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="./assets/styles/styles.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
 </head>
 <body>
+    <div class="app">
+        <header class="app__header">
+            <h1 class="app__header-title roboto-bold">Paldex</h1>
+            <p class="app__header-intro roboto-regular">Search for a Pal by name or using it's National Pal Number.</p>
+            <div class="app__header-inputs">
+                <input type="text" class="app__header-inputs-search" placeholder="Name or number">
+                <button class="app__header-inputs-filters">'=.</button>
+            </div>
+        </header>
 
-    <div class="app"></div>
+        <div class="app__cards"></div>
 
+        <div class="app__modal">
+            <button class="app__modal-close">X</button>
+            <h2 class="app__modal-name roboto-bold"></h2>
+            <p class="app__modal-number roboto-light"></p>
+            <img class="app__modal-image" src="">
+            <p class="app__modal-descr roboto-regular"></p>
+        </div>
+    </div>
 
     <script src="./app.js"></script>
 </body>
